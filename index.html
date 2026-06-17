@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venzo Amphion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Work+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-wrap" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio" aria-label="Venzo inicio">
+        <img src="assets/img/logo-venzo.png" alt="Venzo" />
+      </a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Abrir menu" />
+      <label class="nav-button" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#caracteristicas">Caracteristicas</a>
+        <a href="#beneficios">Beneficios</a>
+        <a class="login-link" href="https://venzoargentina.com.ar/#">Iniciar sesion</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>Venzo Amphion</h1>
+          <p>Rendimiento, control y aventura en una mountain bike disenada para quienes buscan superar nuevos caminos y llevar cada salida al siguiente nivel.</p>
+          <a class="primary-button" href="#caracteristicas">Descubri la Amphion</a>
+        </div>
+        <div class="hero-bike" aria-hidden="true">
+          <img src="assets/img/bici-hero.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="beneficios" aria-label="Beneficios principales">
+      <div class="benefits-grid">
+        <article class="benefit-item">
+          <img src="assets/trending_up_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h2>Rendimiento</h2>
+          <p>Potencia y eficiencia para mejorar cada salida</p>
+        </article>
+        <article class="benefit-item">
+          <img src="assets/directions_bike_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h2>Control</h2>
+          <p>Mayor estabilidad y precision para enfrentar cualquier recorrido con confianza</p>
+        </article>
+        <article class="benefit-item">
+          <img src="assets/explore_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h2>Aventura</h2>
+          <p>Explora nuevos caminos y descubri experiencias mas alla del limite</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="adventure" aria-label="Explora nuevos horizontes">
+      <div class="adventure-panel">
+        <h2>Explora nuevos horizontes</h2>
+        <p>Descubri la libertad de recorrer senderos desafiantes, explorar nuevos paisajes y llegar mas lejos con una bicicleta disenada para acompanar cada aventura y superar nuevos desafios.</p>
+        <div class="feature-mini">
+          <img src="assets/shield_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <div>
+            <strong>Durabilidad</strong>
+            <span>Resistencia y confianza para llegar mas lejos</span>
+          </div>
+        </div>
+        <div class="feature-mini">
+          <img src="assets/mountains.svg" alt="" />
+          <div>
+            <strong>Versatilidad</strong>
+            <span>Preparada para cualquier camino que elijas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product" id="caracteristicas">
+      <div class="product-heading">
+        <h2>Conoce la Amphion</h2>
+        <p>Descubri los componentes que hacen posible una experiencia de conduccion equilibrada, resistente y preparada para cada nuevo desafio.</p>
+      </div>
+      <div class="product-stage">
+        <img class="product-bike" src="assets/img/bici-carac.png" alt="Bicicleta Venzo Amphion" />
+        <div class="marker marker-seat" aria-hidden="true"></div>
+        <div class="marker marker-wheel" aria-hidden="true"></div>
+        <div class="marker marker-gear" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-inner">
+      <a class="footer-logo" href="#inicio" aria-label="Venzo inicio">
+        <img src="assets/img/logo-venzo.png" alt="Venzo" />
+      </a>
+      <div class="footer-column">
+        <h2>Productos</h2>
+        <a href="https://venzoargentina.com.ar/bicicletas/">Bicicletas</a>
+        <a href="https://venzoargentina.com.ar/accesorios/">Accesorios</a>
+        <a href="https://venzoargentina.com.ar/componentes/">Componentes</a>
+      </div>
+      <div class="footer-column contact-column">
+        <h2>Contacto</h2>
+        <p>Av. del Libertador 7421, C1429 Ciudad Autonoma de Buenos Aires</p>
+        <p><strong>Mail:</strong> contacto@venzobikes.com.ar</p>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
