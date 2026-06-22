@@ -1,0 +1,817 @@
+:root {
+  --red: #ed3228;
+  --black: #111213;
+  --cream: #fbf7ef;
+  --muted: #626262;
+  --container: 1200px;
+  --gutter: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--black);
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  height: 88px;
+  background: #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand img {
+  width: 138px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero {
+  height: 882px;
+  background: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  height: 882px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
+  grid-column: 1 / 6;
+  padding-top: 18px;
+  z-index: 2;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 0.97;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  max-width: 580px;
+  font-size: 82px;
+}
+
+.hero-copy p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 23px 0 25px;
+  color: #252525;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 22px;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.features {
+  margin-top: 0;
+  padding: 150px 0 175px;
+  color: #fff;
+  background: #111213;
+  position: relative;
+  overflow: hidden;
+}
+
+.features::before,
+.features::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 118px;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle, rgba(17, 18, 19, 0.98) 0 1px, transparent 1.55px),
+    radial-gradient(circle, rgba(17, 18, 19, 0.78) 0 1.15px, transparent 1.95px),
+    radial-gradient(circle, rgba(17, 18, 19, 0.48) 0 0.85px, transparent 1.5px),
+    linear-gradient(180deg, #111213 4%, rgba(17, 18, 19, 0.92) 30%, rgba(17, 18, 19, 0.48) 63%, rgba(17, 18, 19, 0) 100%);
+  background-size: 3px 3px, 6px 6px, 10px 10px, 100% 100%;
+  filter: blur(0.35px);
+}
+
+.features::before {
+  top: 0;
+  transform: translateY(-54px);
+}
+
+.features::after {
+  bottom: 0;
+  transform: translateY(54px) rotate(180deg);
+}
+
+.features .container {
+  position: relative;
+  z-index: 1;
+}
+
+.features h2 {
+  margin: 0 0 78px;
+  font-size: 48px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 110px;
+  padding: 0 28px;
+}
+
+.feature-card {
+  min-height: 312px;
+  padding: 63px 34px 34px;
+  border-radius: 28px;
+  background: #242424;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 38px;
+  filter: invert(1);
+}
+
+.feature-card h3 {
+  margin: 0 0 24px;
+  color: #fff;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.feature-card p,
+.challenge p,
+.section-title p,
+.spec p,
+.product-card p,
+.adventure p,
+.site-footer p {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.feature-card p {
+  color: #f4f4f4;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.challenge {
+  padding: 160px 0 150px;
+}
+
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  align-items: start;
+}
+
+.challenge-grid img {
+  grid-column: 1 / 8;
+  width: 760px;
+  max-height: 1033px;
+  object-fit: contain;
+}
+
+.challenge-grid div {
+  grid-column: 8 / 13;
+  padding-top: 245px;
+}
+
+.challenge h2 {
+  margin: 0 0 24px;
+  font-size: 48px;
+}
+
+.challenge p {
+  max-width: 455px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bike-specs {
+  padding: 80px 0 150px;
+}
+
+.section-title {
+  max-width: 640px;
+  margin: 0 auto 84px;
+  text-align: center;
+}
+
+.section-title h2 {
+  margin: 0 0 20px;
+  font-size: 48px;
+}
+
+.section-title p {
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.spec-stage {
+  position: relative;
+  min-height: 690px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spec-stage > img {
+  width: 816px;
+  height: 816px;
+  object-fit: contain;
+  margin: 0 auto;
+  transform: translateY(-48px);
+}
+
+.spec {
+  position: absolute;
+  width: 205px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.spec h3 {
+  margin: 0 0 8px;
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.spec::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 1px;
+  background: var(--red);
+}
+
+.spec::before {
+  position: absolute;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2;
+}
+
+.spec-left::after {
+  left: 100%;
+}
+
+.spec-left::before {
+  left: calc(100% + var(--line) - 8px);
+}
+
+.spec-right::after {
+  right: 100%;
+}
+
+.spec-right::before {
+  right: calc(100% + var(--line) - 8px);
+}
+
+.spec-frame {
+  --line: 392px;
+  left: 0;
+  top: 168px;
+}
+
+.spec-frame::after {
+  width: var(--line);
+}
+
+.spec-frame::before {
+  content: "2";
+  left: calc(100% + var(--line) - 8px);
+}
+
+.spec-brake {
+  --line: 126px;
+  left: 0;
+  top: 390px;
+}
+
+.spec-brake::after {
+  width: var(--line);
+}
+
+.spec-brake::before {
+  content: "3";
+  left: calc(100% + var(--line) - 8px);
+}
+
+.spec-drive {
+  --line: 202px;
+  right: 0;
+  top: 82px;
+}
+
+.spec-drive::after {
+  width: var(--line);
+}
+
+.spec-drive::before {
+  content: "1";
+  right: calc(100% + var(--line) - 8px);
+}
+
+.spec-wheel {
+  --line: 74px;
+  right: 0;
+  top: 433px;
+}
+
+.spec-wheel::after {
+  width: var(--line);
+}
+
+.spec-wheel::before {
+  content: "4";
+  right: calc(100% + var(--line) - 8px);
+}
+
+.accessories {
+  padding: 80px 0 188px;
+}
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--gutter);
+}
+
+.product-card {
+  min-height: 350px;
+  border: 1px solid #ded9cf;
+  border-radius: 28px;
+  background: rgba(255, 252, 246, 0.48);
+  overflow: hidden;
+  position: relative;
+  padding: 34px 34px 28px;
+}
+
+.product-card h3 {
+  margin: 0 0 6px;
+  color: #6b6b6b;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-card p {
+  max-width: 330px;
+  color: var(--red);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.product-card img {
+  position: absolute;
+  object-fit: contain;
+}
+
+.product-wide {
+  grid-column: 1 / -1;
+  min-height: 520px;
+}
+
+.product-wide img {
+  width: 610px;
+  left: 50%;
+  bottom: -210px;
+  transform: translateX(-50%);
+}
+
+.product-tall {
+  grid-row: span 2;
+  min-height: 560px;
+}
+
+.product-tall img {
+  width: 500px;
+  left: 50%;
+  bottom: -12px;
+  transform: translateX(-50%);
+}
+
+.product-card:not(.product-wide):not(.product-tall) img {
+  width: 230px;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+}
+
+.product-card:last-child img {
+  width: 240px;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.adventure {
+  position: relative;
+  height: 771px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.adventure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adventure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 63%);
+}
+
+.adventure-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.adventure h2 {
+  max-width: 470px;
+  margin: 0 0 18px;
+  font-size: 82px;
+}
+
+.adventure p {
+  max-width: 560px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.site-footer {
+  padding: 78px 0 92px;
+  background: #050505;
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.55fr;
+  gap: 120px;
+}
+
+.footer-brand img {
+  width: 170px;
+  margin-bottom: 72px;
+}
+
+.socials {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.socials a {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.socials svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.socials svg path:first-child {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.socials .play {
+  fill: #050505;
+  stroke: #050505;
+}
+
+.site-footer h2 {
+  margin: 0 0 28px;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.site-footer a,
+.site-footer p {
+  display: block;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.section-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    height: 72px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 720px;
+  }
+
+  .hero-grid,
+  .challenge-grid {
+    display: block;
+  }
+
+  .hero-grid {
+    height: auto;
+    min-height: 720px;
+    padding: 78px 0 70px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
+
+  h1 {
+    font-size: clamp(54px, 12vw, 92px);
+  }
+
+  .features {
+    margin-top: 36px;
+    padding: 120px 0 130px;
+  }
+
+  .feature-grid {
+    gap: 24px;
+    padding: 0;
+  }
+
+  .challenge {
+    padding: 90px 0;
+  }
+
+  .challenge-grid img {
+    width: min(560px, 100%);
+    margin: 0 auto 44px;
+  }
+
+  .challenge-grid div {
+    max-width: 560px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  .spec-stage {
+    min-height: auto;
+  }
+
+  .spec-stage > img {
+    width: min(816px, 100%);
+    height: auto;
+  }
+
+  .spec {
+    position: static;
+    width: auto;
+    margin: 18px 0;
+    padding-left: 18px;
+    border-left: 3px solid var(--red);
+  }
+
+  .spec::before,
+  .spec::after {
+    display: none;
+  }
+
+  .accessory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-wide,
+  .product-tall,
+  .product-card {
+    min-height: 430px;
+  }
+
+  .product-wide img,
+  .product-tall img,
+  .product-card:not(.product-wide):not(.product-tall) img,
+  .product-card:last-child img {
+    width: min(430px, 82%);
+    right: 50%;
+    left: auto;
+    bottom: -70px;
+    transform: translateX(50%);
+  }
+
+  .adventure h2 {
+    font-size: clamp(48px, 10vw, 78px);
+  }
+
+  .footer-grid {
+    gap: 44px;
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .nav {
+    align-items: center;
+  }
+
+  .brand img {
+    width: 104px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .hero {
+    padding-top: 54px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .hero-copy p:not(.eyebrow),
+  .challenge p,
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .feature-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 250px;
+    padding: 48px 28px 30px;
+    border-radius: 22px;
+  }
+
+  .features h2,
+  .challenge h2,
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .bike-specs,
+  .accessories {
+    padding: 58px 0 86px;
+  }
+
+  .section-title {
+    margin-bottom: 44px;
+  }
+
+  .product-card {
+    border-radius: 20px;
+    padding: 26px;
+  }
+
+  .adventure {
+    height: 530px;
+  }
+
+  .adventure > img {
+    object-position: 58% center;
+  }
+
+  .site-footer {
+    padding: 52px 0;
+  }
+
+  .footer-brand img {
+    margin-bottom: 34px;
+  }
+}
